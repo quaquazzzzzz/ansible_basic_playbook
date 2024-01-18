@@ -1,0 +1,23 @@
+---
+- hosts: masters
+  become: yes
+  tasks:
+    - name: Update apt cache
+      apt:
+        update_cache: yes
+    - name: Installiere notwendige Pakete
+      apt:
+        name: [nginx, git] # Ersetzen Sie diese mit den tatsächlichen Paketnamen
+        state: present
+
+- hosts: workers
+  become: yes
+  tasks:
+    - name: Update apt cache
+      apt:
+        update_cache: yes
+    - name: Installiere notwendige Pakete
+      apt:
+        name: [nginx, git] # Ersetzen Sie diese mit den tatsächlichen Paketnamen
+        state: present
+

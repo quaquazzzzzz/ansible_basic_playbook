@@ -1,0 +1,13 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ansible retry files
+*.retry
+
+# Ansible configuration
+ansible.cfg
+
+# SSH Keys
+*.pem
